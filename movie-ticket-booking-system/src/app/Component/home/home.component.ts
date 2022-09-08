@@ -1,14 +1,13 @@
-import { ApiService } from './api.service';
-import { HttpClient } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-// import { HttpClient } from '@angular/common/http';
+import { ApiService } from 'src/app/api.service';
+
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css']
 })
-export class AppComponent {
+export class HomeComponent implements OnInit {
   data: any;
   img : any = [];
   updatedData: any;
@@ -29,8 +28,7 @@ export class AppComponent {
    })
    
   }
-  
-  title = 'movie-ticket-booking-system';
+  ngOnInit(): void {
+  }
+
 }
-
-

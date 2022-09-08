@@ -1,0 +1,19 @@
+<app-navbar></app-navbar>
+<div>
+    <div class="container movies">
+        <div class="mt-4 shadow-lg p-3 mb-5 bg-body rounded bg-primary text-danger">
+            <h3>Book Your Movie Now</h3>
+        </div>
+
+        <div *ngFor="let item of updatedData.Search" class=" card m-3" style="width: 18rem;">
+            <div class=" card" style="width: 18rem;">
+                <img src={{updatedData.Search[0].Poster}} class="card-img-top img-fluid" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Movie Name: {{updatedData.Search[0].Title}}</h5>
+                    <h6>Year: {{updatedData.Search[0].Year}}</h6>
+                    <a href="#" class="btn btn-primary">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
