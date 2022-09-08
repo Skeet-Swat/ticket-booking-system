@@ -48,4 +48,8 @@ if(this.RegisterForm.invalid){
 }
 }
 
+get username(){
+  return this.RegisterForm.get('username');
+
+}
 }

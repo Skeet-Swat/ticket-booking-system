@@ -12,24 +12,15 @@
                     <label for="username">Username</label>
                     <input type="text" name="" class="form-control" formControlName="username"
                         [ngClass]="{'is-invalid':submitted && userForm.username.errors}">
-                    <div *ngIf="submitted && userForm.username.errors" class="invalid-feedback">
-                        <div *ngIf="userForm.username.errors.required">
-                            Username is requiured.
-                        </div>
-                    </div>
-
+                        <span style="color: red" *ngIf="username && userForm.username.invalid && userForm.username.touched">Username is requiured.</span>
+                    
                 </div>
 
                 <div class="form-group">
                     <label for="password">Password</label>
                     <input type="password" name="" class="form-control" formControlName="password"
                         [ngClass]="{'is-invalid':submitted && userForm.password.errors}">
-                    <div *ngIf="submitted && userForm.password.errors" class="invalid-feedback">
-                        <div *ngIf="userForm.password.errors.required">
-                            Password is requiured.
-                        </div>
-                    </div>
-
+                        <span style="color: red" *ngIf="userForm.password && userForm.password.touched">Password is requiured.</span>
                 </div>
 
                 <div class="form-group">
